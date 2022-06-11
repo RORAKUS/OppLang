@@ -91,4 +91,99 @@ If you run `opp compile` on a library project, it will compile library into `.op
 To run project you need to run `opp run` command. It will **interpret** these files. <span style='color: red'><strong>LIBRARY FILES CANNOT BE RAN!</strong></span>
 
 ## Project yml
+> ### Basic project.yml
+> ```yml
+> name: <project-name>
+> author: <username>
+> version: 0.0.1-SNAPSHOT
+> library: false
+> compiler:
+>   extension: null
+>   keep-c-files: false
+>   delete-object-files: false
+>   wipe-binaries: false
+> files:
+>   source:
+>       main: src/main.opp
+>       main-base: src/bpp/main.bpp
+>       base: src/bpp
+>       libs: src/lpp
+>   c: c
+>   objects: obj
+>   binary: bin
+>   external-libraries: lib
+> additional-libraries: null # + all in opp path
+> ```
+> Where `<project-name>` is the name of the project and `<username>` is `$USERNAME` or `%USERNAME%`.
+> You can add additional libraries to your project or specify an extension for the executable.
+> 
+> ### Library project.yml
+> ```yml
+> name: <project-name>
+> author: <username>
+> version: 0.0.1-SNAPSHOT
+> library: true
+> compiler:
+>   extension: .opplib
+>   wipe-binaries: false
+> files:
+>   libraries: src/lpp
+>   bases: src/bpp
+>   final-lib: fin
+>   external-libraries: lib
+> additional-libraries: null # + all in opp path
+> ```
+> Where `<project-name>` is the name of the project and `<username>` is `$USERNAME` or `%USERNAME%`.
+> You can add additional libraries to your project. **THIS KIND OF PROJECT CANNOT BE RAN.**
+> 
+> ### Functional project.yml
+> ```yml
+> name: <project-name>
+> author: <username>
+> version: 0.0.1-SNAPSHOT
+> library: false
+> compiler:
+>   extension: null
+>   keep-c-files: false
+>   delete-object-files: false
+>   wipe-binaries: false
+> files:
+>   source:
+>       main: src/start/start.opp
+>       main-base: src/start/start.bpp
+>       base: src/bpp
+>       libs: src/lpp
+>   c: c
+>   objects: obj
+>   binary: bin
+>   external-libraries: lib
+> additional-libraries: null # + all in opp path
+> ```
+> The same as basic project, only some values changed.
 
+Project.yml is a configuration file. Every O++ project must have it. Here are the values explained: <br>
++ `name` is the name of the project and the first part of the name of the executable - **use lowercase letters and avoid blanks**
++ `author` is an author of the project. It's not required.
++ `version` is the version of the project. Version rules:
+  - There are three numbers, that can be from 0 to 255. 
+  - The **first number** is the main version of the program. Prereleases uses 0, first release 1. Bigger numbers only with solid changes to the program.
+  - The **second number** is the feature/update version. With new bigger features or updates it increases.
+  - The **third number** is basicly the bugfix or slight change version. Every time you change code but not the first two numbers, change it.
+  - The word following after `-` can be **SNAPSHOT** or **RELEASE**. It speaks for itself.
++ `library` says if it's a library project or not
++ `compiler.extension` is the extension of final executable, or `.opplib` for libraries.
++ `compiler.keep-c-files` *(only for non-library projects)* says if compiler keeps `.c` files (in `[files.c]`)
++ `compiler.delete-object-files` *(only for non-library projects)* says if compiler delets object files in `[files.c]`. If set to true, `obj` folder is deleted
++ `compiler.wipe-binaries` says if the compiler firstly wipe `[files.binary]` or `[files.final-lib]` before creating one
++ `files.source.main` *(only for non-library projects)* is the name of main `.opp` file.
++ `files.source.main-base` *(only for non-library projects)* is the name of base for `[files.source.main]`.
++ `files.source.base` *(only for non-library projects)* is the name of the folder with base files (for libraries)
++ `files.source.libs` *(only for non-library projects)* is the name of the folder with `.lpp` files
++ `files.c` *(only for non-library projects)* is the name of the folder where C files are stored
++ `files.objects` *(only for non-library projects)* is the name of the folder where object files are stored
++ `files.binary` *(only for non-library projects)* is the name of the folder where executable binaries are stored
++ `files.libraries` *(only for library projects)* is the name of the folder where the source libraries are stored
++ `files.bases` *(only for library projects)* is the name of the folder where source bases for libraries are stored
++ `files.final-lib` *(only for library projects)* is the name of the folder where final `.opplib` files are stored
++ `files.external-libraries` is the name of the folder where external library `.lpp:.bpp` or `.opplib` files are stored
++ `additional-libraries` is an array of libraries, that are added to your project. Example of elements: `/lib/lo.lpp:/lib/lo.bpp`, `/lib/lo.opplib`

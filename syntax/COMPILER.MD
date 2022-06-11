@@ -18,6 +18,8 @@ The compiler has six modes:
 - Show or manage module path - shows or changes module path, where O++ compiler searches for libraries
 - Help - shows help (`opp help` or `opp --help`)
 
+<span style="color:red;font-size:20px"><strong>Needs gcc to work!</strong></span>
+
 ## opp run
 > ### Arguments
 > `opp run <code-file> -b <base-file> -l [lib-file]:[lib-base-file] ...` <br>
