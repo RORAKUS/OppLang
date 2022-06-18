@@ -1,0 +1,23 @@
+# Code part syntax
+
+> ## Table of contents
+> 1. [How it works](#basic-info)
+> 2. [`.` instruction](#dot-instruction)
+> 3. [`;` instruction](#semicolon-instruction)
+> 4. [`,` instruction](#comma-instruction)
+> 5. [`!` instruction](#bang-instruction)
+> 6. [`~` instruction](#tilde-instruction)
+> 7. [`$` instruction](#dollar-instruction)
+> 8. [`%` instruction](#percent-instruction)
+> 9. [`@` instruction](#at-instruction)
+> 10. [`#` instruction](#hash-instruction)
+> 11. [`+`, `-`, `*`, `/` instructions](#arithmetic-instructions)
+> 12. [`&`, `|`, `^` instructions](#bitwise-instructions)
+> 13. [`=`, `>`, `<` instructions](#comparison-instructions)
+> 14. [`[`, `]` instructions](#loop-instructions)
+> 15. [`(`, `)` instructions](#command-group-instructions)
+> 16. [`'` instruction](#quote-instruction)
+> 17. [`:` instruction](#colon-instruction)
+> 18. [Quantity modifiers](#quantity-modifiers)
+> 19. [Base address modifiers](#base-address-modifiers)
+> 20. [Blocks with base section](#blocks-with-base-section)

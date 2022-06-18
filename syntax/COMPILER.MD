@@ -7,6 +7,7 @@
 > 4. [Creating a project](#opp-new)
 > 5. [Inicializing a project](#opp-init)
 > 6. [Module path](#opp-path)
+> 7. [Options](#opp-option)
 
 ## Overview
 `opp` is a compiler for O++ language. Besides compiling, it provides an eazy way to manage your code in **projects**.
@@ -86,3 +87,8 @@ Otherwise, it adds not only `.oppproject` but also `project.yml` file to that di
 > Clears all paths where O++ compiler searches for libraries except of system path. <br>
 
 Compiler stores paths in file. Unremovable default path is `/lib/opp`. This command modifies the path.
+
+## opp option
+> ### Arguments
+> `opp option compiler <command>` <br>
+> Sets C compiler to `command`.
