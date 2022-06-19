@@ -40,7 +40,7 @@ Basic project contains five folders. `src` folder contains `main.opp` file, wher
 
 `project.yml` file contains project configuration. More information about it can be found in [Project.yml](syntax/PROJECT.MD).
 
-`.oppproject` file is used only for compiler to know that the folder is an O++ projcect.
+`.oppproject` file is used only for compiler to know that the folder is an O++ project.
 
 ## Library project
 > ### Structure
@@ -166,9 +166,9 @@ Project.yml is a configuration file. Every O++ project must have it. Here are th
 + `author` is an author of the project. It's not required.
 + `version` is the version of the project. Version rules:
   - There are three numbers, that can be from 0 to 255. 
-  - The **first number** is the main version of the program. Prereleases uses 0, first release 1. Bigger numbers only with solid changes to the program.
+  - The **first number** is the main version of the program. Prerelease uses 0, first release 1. Bigger numbers only with solid changes to the program.
   - The **second number** is the feature/update version. With new bigger features or updates it increases.
-  - The **third number** is basicly the bugfix or slight change version. Every time you change code but not the first two numbers, change it.
+  - The **third number** is basically the bugfix or slight change version. Every time you change code but not the first two numbers, change it.
   - The word following after `-` can be **SNAPSHOT** or **RELEASE**. It speaks for itself.
 + `library` says if it's a library project or not
 + `compiler.extension` is the extension of final executable, or `.opplib` for libraries.

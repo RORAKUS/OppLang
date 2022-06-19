@@ -12,7 +12,7 @@
 
 ## What is O++?
 O++ is an **esoteric** programming language, that was made by RORAK in 2022.
-It provides an eazy unreadable way to write code, but it is also a powerful tool.
+It provides an easy unreadable way to write code, but it is also a powerful tool.
 Just give it a try.
 
 ## O++ parts
@@ -27,7 +27,7 @@ It has extension `.opp` and it contains **instructions** of your code.
 This part is the main entry point of every program.
 
 ### Base part
-As you know, almost every instruction has some **parameters** wich are used to tell what exactly should the instruction do.
+As you know, almost every instruction has some **parameters** which are used to tell what exactly should the instruction do.
 The base part sets **registers**, that are used as parameters for instructions. If you use `.` instruction in your code part, control will be passed to the base part. In base part you use `out()` to switch back to the code part.
 
 ### Library part
@@ -49,9 +49,8 @@ Every library has a base with the same name as the library. In code, used librar
 4. Small programs
 
 ## Compiling
-O++ language provides a program called `opp` (`opp.exe` on windows), that besides compiles your code.
+O++ language provides a program called `opp` (`opp.exe` on windows), that besides compiling your code can also create and manage O++ projects.
+A **run** mode runs your code. It's slow and interpreted.
+A **compile** mode compiles your code to C and then to binary.
 
-A **run** mode runs your code. It's slow and interpreted. You use `opp run <main.opp> -b <main.bpp> -l [lib.lpp]:[lib.bpp] ...` to run your code.
-
-A **compile** mode compiles your code to C and then to binary. You use `opp compile [-C] [-O output] <main.opp> -b <main.bpp> -l [lib.lpp]:[lib.bpp] ...` to compile your code.
 More [here](COMPILER.MD)

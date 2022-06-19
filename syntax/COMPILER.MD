@@ -10,12 +10,12 @@
 > 7. [Options](#opp-option)
 
 ## Overview
-`opp` is a compiler for O++ language. Besides compiling, it provides an eazy way to manage your code in **projects**.
+`opp` is a compiler for O++ language. Besides compiling, it provides an easy way to manage your code in **projects**.
 The compiler has six modes:
 - Interpreting mode - runs your code (slow)
 - Compiling mode - compiles your code to C and then to binary (fast)
 - Creating a project - creates a new O++ project and basic structure
-- Inicializing a project - inicializes an existing O++ project for example from github (if not created by `opp new`)
+- Initializing a project - initializes an existing O++ project for example from github (if not created by `opp new`)
 - Show or manage module path - shows or changes module path, where O++ compiler searches for libraries
 - Help - shows help (`opp help` or `opp --help`)
 
@@ -31,7 +31,7 @@ The compiler has six modes:
 > <br>
 > `opp run` when current folder is nonlibrary O++ project.
 
-This runs your code in console. It's interpreted and the compiler is written in C#, so it's slow. Use it only for testing!
+This runs your code in console. It's interpreted and the compiler is written in Java, so it's slow. Use it only for testing!
 
 ## opp compile
 > ### Arguments
