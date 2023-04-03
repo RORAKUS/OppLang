@@ -24,7 +24,7 @@
 > 21. [Blocks with base section](#blocks-with-base-section)
 
 ## Basic info
-O++ program is mainly divided into 2 sections, every section in one file. Firstly the **code** section (`.opp` file) and secondly the **base** section (`.bpp` file). This file is about the code section. It contains instruction - one character = one instructions (exception - modifiers). Every instruction need some operands, for example print instruction need two operands - what to print and where to print. These operands are set in the base section. You give control to the base section with special base instruction. When any instruction from the code section is executed operand values are taken from the base section and used.
+O++ program is mainly divided into 2 sections, every section in one file. Firstly the **code** section (`.opp` file) and secondly the **base** section (`.bpp` file). This file is about the code section. It contains instruction - one character = one instructions (exception - modifiers). Every instruction needs some operands, for example print instruction needs two operands - what to print and where to print. These operands are set in the base section. You give control to the base section with special base instruction. When any instruction from the code section is executed operand values are taken from the base section and used.
 
 ## Dot instruction
 The dot instruction is used to pass the control to the base section, until a special base instruction is executed. When that happens, control is passed back to the code section.
